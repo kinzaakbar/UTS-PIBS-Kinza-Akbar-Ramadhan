@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Mahasiswa - Kinza</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">K</div>
+    <div>
+      <h1>Profil Mahasiswa</h1>
+      <p>Kinza - Sistem Informasi - Universitas Pembangunan Jaya</p>
+    </div>
+  </header>
+
+  <div class="isi">
+
+    <nav>
+      <ul>
+        <li><a href="#" onclick="tampil('biodata', this); return false;" class="aktif">Biodata</a></li>
+        <li><a href="#" onclick="tampil('pendidikan', this); return false;">Pendidikan</a></li>
+        <li><a href="#" onclick="tampil('pengalaman', this); return false;">Pengalaman</a></li>
+        <li><a href="#" onclick="tampil('keahlian', this); return false;">Keahlian</a></li>
+        <li><a href="#" onclick="tampil('publikasi', this); return false;">Publikasi</a></li>
+      </ul>
+    </nav>
+
+    <section>
+
+      <article id="biodata" class="konten tampil">
+        <h2>Biodata</h2>
+        <table>
+          <tr><td>NIM</td><td>: 2025081006</td></tr>
+          <tr><td>Nama</td><td>: Kinza</td></tr>
+          <tr><td>Program Studi</td><td>: Sistem Informasi</td></tr>
+          <tr><td>Universitas</td><td>: Universitas Pembangunan Jaya</td></tr>
+          <!-- GANTI sesuai data kamu -->
+          <tr><td>Agama</td><td>: Islam</td></tr>
+          <tr><td>Tanggal Lahir</td><td>: 1 Januari 2007</td></tr>
+          <tr><td>Tempat Lahir</td><td>: Tangerang Selatan</td></tr>
+        </table>
+      </article>
+
+      <article id="pendidikan" class="konten">
+        <h2>Pendidikan</h2>
+        <ul>
+          <li><b>2025 - sekarang:</b> S1 Sistem Informasi, Universitas Pembangunan Jaya</li>
+          <li><b>2022 - 2025:</b> SMA/SMK (isi nama sekolah)</li>
+          <li><b>2019 - 2022:</b> SMP (isi nama sekolah)</li>
+          <li><b>2013 - 2019:</b> SD (isi nama sekolah)</li>
+        </ul>
+      </article>
+
+      <article id="pengalaman" class="konten">
+        <h2>Pengalaman</h2>
+        <ul>
+          <li>Membuat aplikasi manajemen produk (CRUD) dengan Laravel.</li>
+          <li>Mengerjakan proyek kelompok desain UI game matematika.</li>
+          <li>Membuat website kesadaran food waste dengan HTML dan CSS.</li>
+        </ul>
+      </article>
+
+      <article id="keahlian" class="konten">
+        <h2>Keahlian</h2>
+        <ul>
+          <li>HTML dan CSS</li>
+          <li>JavaScript dasar</li>
+          <li>PHP dan Laravel</li>
+          <li>Git dan GitHub</li>
+          <li>Desain antarmuka (UI)</li>
+        </ul>
+      </article>
+
+      <article id="publikasi" class="konten">
+        <h2>Publikasi</h2>
+        <ul>
+          <li>Studi Kasus Serangan Ransomware dan Supply Chain (esai keamanan siber, 2025)</li>
+          <li>Dasar Logika Matematika (makalah, 2025)</li>
+          <li>Aplikasi Graf: Dijkstra dan Prim (laporan Matematika Diskret, 2025)</li>
+        </ul>
+      </article>
+
+    </section>
+
+    <aside>
+      <h3>Hobi:</h3>
+      <ul>
+        <li>Pemrograman</li>
+        <li>Mendesain antarmuka</li>
+        <li>Mendengarkan musik</li>
+        <li>Membaca</li>
+        <li>Bermain game</li>
+      </ul>
+    </aside>
+
+  </div>
+
+  <footer>
+    <div class="kiri">
+      <p>Twitter: @kinza</p>
+      <p>FB: @kinza</p>
+      <p>Instagram: @kinza</p>
+    </div>
+    <div class="tengah">
+      <p>&copy; 2025. All Rights Reserved</p>
+    </div>
+    <div class="kanan">
+      <p><b>KinzaWeb</b></p>
+      <p>Belajar, membangun, berbagi.</p>
+    </div>
+  </footer>
+
+  <script>
+    function tampil(id, el) {
+      var semua = document.querySelectorAll('.konten');
+      for (var i = 0; i < semua.length; i++) {
+        semua[i].classList.remove('tampil');
+      }
+      document.getElementById(id).classList.add('tampil');
+
+      var menu = document.querySelectorAll('nav a');
+      for (var j = 0; j < menu.length; j++) {
+        menu[j].classList.remove('aktif');
+      }
+      el.classList.add('aktif');
+    }
+  </script>
+
+</body>
+</html>
