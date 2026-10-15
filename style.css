@@ -9,6 +9,9 @@ body {
   background-color: #eef2f7;
   color: #333;
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ===== HEADER ===== */
@@ -47,6 +50,7 @@ header p {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  flex: 1;
 }
 
 /* ===== NAV (smartphone) ===== */
