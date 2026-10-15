@@ -218,8 +218,12 @@ footer div {
   }
 }
 
-/* ===== DESKTOP (1200px ke atas): nav 25% - section 50% - aside 25% ===== */
+/* ===== DESKTOP (1200px ke atas) */
 @media (min-width: 1200px) {
+
+ nav {
+    width: 25%;
+  }
 
   section {
     width: 50%;
